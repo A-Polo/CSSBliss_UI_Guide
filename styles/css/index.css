@@ -1490,9 +1490,9 @@ input[type="checkbox"]:not(.CheckBox-input).Checkbox::before {
   width: 18px;
 }
 input[type="checkbox"]:not(.CheckBox-input).Checkbox:checked::before {
-  background: #FFF url('/images/icons/checkbox_tick.svg?1525415541') center no-repeat;
+  background: #FFF url("../../images/icons/checkbox_tick.svg") center no-repeat;
 }
 input[type="checkbox"]:not(.CheckBox-input).Checkbox--fill:checked::before {
-  background: #0080C6 url('/images/icons/checkbox_tick_white.svg?1525415541') center no-repeat;
+  background: #0080C6 url("../../images/icons/checkbox_tick_white.svg") center no-repeat;
   border-color: #0080C6;
 }

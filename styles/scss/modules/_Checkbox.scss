@@ -17,14 +17,14 @@ input[type="checkbox"]:not(.CheckBox-input) {
 
     &:checked {
       &::before {
-        background: $white image-url("icons/checkbox_tick.svg") center no-repeat;
+        background: $white url("../../images/icons/checkbox_tick.svg") center no-repeat;
       }
     }
 
     &--fill {
       &:checked {
         &::before {
-          background: $classicBlue image-url("icons/checkbox_tick_white.svg") center no-repeat;
+          background: $classicBlue url("../../images/icons/checkbox_tick_white.svg") center no-repeat;
           border-color: $classicBlue;
         }
       }

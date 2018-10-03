@@ -3,11 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f9029276-ae55-4bf1-a6f4-f74cc4cd34d9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gruntfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/gruntfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/checkbox_tick.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/icons/checkbox_tick.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/icons/checkbox_tick_white.svg" beforeDir="false" afterPath="$PROJECT_DIR$/images/icons/checkbox_tick_white.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/css/index.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/styles/css/index.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/scss/modules/_Checkbox.scss" beforeDir="false" afterPath="$PROJECT_DIR$/styles/scss/modules/_Checkbox.scss" afterDir="false" />
@@ -65,32 +60,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style_guide.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/styles/scss/style_guide.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="3" lean-forward="true" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_Checkbox.scss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="_Checkbox.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/styles/scss/modules/_Checkbox.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+            <state relative-caret-position="285">
+              <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="checkbox_tick_white.svg" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/images/icons/checkbox_tick_white.svg">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file leaf-file-name="checkbox_tick.svg" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/images/icons/checkbox_tick.svg">
-          <provider selected="true" editor-type-id="images" />
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="_variables.scss" pinned="false" current-in-tab="false">
@@ -143,8 +128,8 @@
         <option value="$PROJECT_DIR$/styles/scss/modules/_Button.scss" />
         <option value="$PROJECT_DIR$/styles/scss/index.scss" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/gruntfile.js" />
+        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/styles/scss/modules/_Checkbox.scss" />
       </list>
     </option>
@@ -181,17 +166,6 @@
             <path>
               <item name="styleguide" type="b2602c69:ProjectViewProjectNode" />
               <item name="styleguide" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="styleguide" type="b2602c69:ProjectViewProjectNode" />
-              <item name="styleguide" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="styleguide" type="b2602c69:ProjectViewProjectNode" />
-              <item name="styleguide" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="icons" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -244,18 +218,18 @@
       <updated>1537953193876</updated>
       <workItem from="1537953195628" duration="5650000" />
       <workItem from="1538117183177" duration="2820000" />
-      <workItem from="1538569319168" duration="4494000" />
+      <workItem from="1538569319168" duration="5227000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12964000" />
+    <option name="totallyTimeSpent" value="13697000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="962" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25579977" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25579977" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -264,7 +238,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.29132947" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.29132947" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -451,13 +425,6 @@
     <entry file="file://$PROJECT_DIR$/cssblissguide.github.io/icons/checkbox_tick.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/scss/modules/_FormError.scss">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -506,18 +473,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/scss/modules/_Checkbox.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/images/icons/checkbox_tick.svg">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/images/icons/checkbox_tick_white.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/images/icons/checkbox_tick.svg">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="5" selection-start-line="3" selection-start-column="5" selection-end-line="3" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/scss/modules/_Checkbox.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="41" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="41" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
