@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+  <title>Style Guide</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="styles/css/index.css">
+</head>
+<body class="StyleGuide">
+<header class="jsHeader StyleGuideNav">
+  <div class="StyleGuideNav-top">
+    <a href="javascript:void(0)" class="jsBurger StyleGuideNav-burger">
+      <span class="StyleGuideNav-patty"></span>
+    </a>
+    <div class="StyleGuideNav-logo">
+      The Style Guide
+    </div>
+  </div>
+  <nav class="jsStyleGuideNav StyleGuideNav-navigation u-borderBottom">
+    <ul class="StyleGuideNav-navList">
+      <li class="StyleGuideNav-navListItem">
+        <a href="#top" class="jsNavLink StyleGuideNav-navLink Title Title--secondary">Top</a>
+      </li>
+      <li class="StyleGuideNav-navListItem">
+        <a href="#colors" class="jsNavLink StyleGuideNav-navLink Title Title--secondary">Color Palette</a>
+      </li>
+      <li class="StyleGuideNav-navListItem">
+        <a href="#buttons" class="jsNavLink StyleGuideNav-navLink Title Title--secondary">Buttons</a>
+      </li>
+      <li class="StyleGuideNav-navListItem">
+        <a href="#typography" class="jsNavLink StyleGuideNav-navLink Title Title--secondary">Typography</a>
+      </li>
+      <li class="StyleGuideNav-navListItem">
+        <a href="#forms" class="jsNavLink StyleGuideNav-navLink Title Title--secondary">Forms</a>
+      </li>
+    </ul>
+  </nav>
+  <a href="javascript:void(0)" class="StyleGuideNav-overlay jsNavOverlay"></a>
+</header>
+
+<div class="StyleGuide-content">
+  <section id="top">
+    <div class="u-width--984 u-centered">
+      <h1 class="Title--primaryLg u-borderBottom">Basic Style Guide</h1>
+
+      <p>
+        The Basic style guide is a collection of HTML components and CSS modules .
+        This Style Guide is available for mobile devices. You can check this in your developer tools.
+      </p>
+
+      <h3>HTML</h3>
+
+      <p>
+        HTML components should be semantic and utilize the appropriate tags and
+        attributes that provide meaningful context. i.e...knowing when to use
+        <strong>article</strong> and <strong>section</strong> tags.
+      </p>
+
+      <p>
+        <a href="//html5doctor.com/" target="_blank">HTML5doctor</a> is a good reference.
+      </p>
+
+
+      <h3>CSS</h3>
+      <p>
+        I use here CSS Bliss as base part of this style guide.
+        Follow the <a href="https://github.com/gilbox/css-bliss" target="_blank">CSS Bliss</a>
+        style guide when building out CSS modules.
+      </p>
+    </div>
+  </section>
+
+  <section id="colors" class="jsGuideSection">
+    <div class="u-width--984 u-centered">
+      <h2 class="Title--primaryLg u-borderBottom">Color Palette</h2>
+      <div class="ColorPalette">
+        <p>
+          Below are the colors we use on the site along with their corresponding SASS variables.
+          No color on the site (new designs only) should steer away from this palette, wih the exception of hover/active states.
+          Those exceptions will use SASS lighten/darken functions.
+        </p>
+
+        <div class="Examples u-background-white">
+          <div class="ColorPalette-colorsContainer">
+            <span class="ColorPalette-heading Title Title--secondary u-color-goatGrey u-text--uppercase">Blues</span>
+            <ul class="ColorPalette-paletteList">
+
+              <li class="ColorPalette-color ColorPalette-color--ink">
+                <span class="u-text--semiBold u-color-white u-font-baseSize">$ink</span>
+                <div class="ColorPalette-colorCopy ColorPalette-colorCopy--light">
+                  <div class="u-text--semiBold u-text--uppercase">Ink</div>
+                  <div>#032765</div>
+                </div>
+              </li>
+
+              <li class="ColorPalette-color ColorPalette-color--brightBlue">
+                <span class="u-text--semiBold u-color-white u-font-baseSize">$brightBlue</span>
+                <div class="ColorPalette-colorCopy ColorPalette-colorCopy--light">
+                  <div class="u-text--semiBold u-text--uppercase">Bright Blue</div>
+                  <div>#0195E5</div>
+                </div>
+              </li>
+
+              <li class="ColorPalette-color ColorPalette-color--classicBlue">
+                <span class="u-text--semiBold u-color-white u-font-baseSize">$classicBlue</span>
+                <div class="ColorPalette-colorCopy ColorPalette-colorCopy--light">
+                  <div class="u-text--semiBold u-text--uppercase">Classic Blue</div>
+                  <div>#0080C6</div>
+                </div>
+              </li>
+
+              <li class="ColorPalette-color ColorPalette-color--glass">
+                <span class="u-text--semiBold u-font-baseSize">$glass</span>
+                <div class="ColorPalette-colorCopy">
+                  <div class="u-text--semiBold u-text--uppercase">Glass</div>
+                  <div>#D5F3FD</div>
+                </div>
+              </li>
+
+              <li class="ColorPalette-color ColorPalette-color--frostedGlass">
+                <span class="u-text--semiBold u-font-baseSize">$frostedGlass</span>
+                <div class="ColorPalette-colorCopy">
+                  <div class="u-text--semiBold u-text--uppercase">Frosted Glass</div>
+                  <div>#E6F8FE</div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+
+          <div class="ColorPalette-colorsContainer">
+            <span class="ColorPalette-heading Title Title--secondary u-color-goatGrey u-text--uppercase">Accents</span>
+            <ul class="ColorPalette-paletteList">
+
+              <li class="ColorPalette-color ColorPalette-color--highlightTeal">
+                <span class="u-text--semiBold u-font-baseSize">$highlightTeal</span>
+                <div class="ColorPalette-colorCopy">
+                  <div class="u-text--semiBold u-text--uppercase">Highlight Teal</div>
+                  <div>#3FE8DF</div>
+                </div>
+              </li>
+
+              <li class="ColorPalette-color ColorPalette-color--highlightAvocado">
+                <span class="u-text--semiBold u-font-baseSize">$highlightAvocado</span>
+                <div class="ColorPalette-colorCopy">
+                  <div class="u-text--semiBold u-text--uppercase">Highlight Avocado</div>
+                  <div>#E0E572</div>
+                </div>
+              </li>
+
+              <li class="ColorPalette-color ColorPalette-color--highlightDove">
+                <span class="u-text--semiBold u-font-baseSize">$highlightDove</span>
+                <div class="ColorPalette-colorCopy">
+                  <div class="u-text--semiBold u-text--uppercase">Highlight Dove</div>
+                  <div>#B5C8C9</div>
+                </div>
+              </li>
+
+              <li class="ColorPalette-color ColorPalette-color--errorRed">
+                <span class="u-text--semiBold u-color-white u-font-baseSize">$errorRed</span>
+                <div class="ColorPalette-colorCopy ColorPalette-colorCopy--light">
+                  <div class="u-text--semiBold u-text--uppercase">Error Red</div>
+                  <div>#ED432F</div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+
+          <div class="ColorPalette-colorsContainer">
+            <span class="ColorPalette-heading Title Title--secondary u-color-goatGrey u-text--uppercase">Greys</span>
+            <ul class="ColorPalette-paletteList">
+
+              <li class="ColorPalette-color ColorPalette-color--whaleGrey">
+                <span class="u-text--semiBold u-color-white u-font-baseSize">$whaleGrey</span>
+                <div class="ColorPalette-colorCopy ColorPalette-colorCopy--light">
+                  <div class="u-text--semiBold u-text--uppercase">Whale Grey</div>
+                  <div>#1A1F2C</div>
+                </div>
+              </li>
+
+              <li class="ColorPalette-color ColorPalette-color--wolfGrey">
+                <span class="u-text--semiBold u-color-white u-font-baseSize">$wolfGrey</span>
+                <div class="ColorPalette-colorCopy ColorPalette-colorCopy--light">
+                  <div class="u-text--semiBold u-text--uppercase">Wolf Grey</div>
+                  <div>#62646A</div>
+                </div>
+              </li>
+
+              <li class="ColorPalette-color ColorPalette-color--koalaGrey">
+                <span class="u-text--semiBold u-color-white u-font-baseSize">$koalaGrey</span>
+                <div class="ColorPalette-colorCopy ColorPalette-colorCopy--light">
+                  <div class="u-text--semiBold u-text--uppercase">Koala Grey</div>
+                  <div>#8C8C8C</div>
+                </div>
+              </li>
+
+              <li class="ColorPalette-color ColorPalette-color--goatGrey">
+                <span class="u-text--semiBold u-color-white u-font-baseSize">$goatGrey</span>
+                <div class="ColorPalette-colorCopy ColorPalette-colorCopy--light">
+                  <div class="u-text--semiBold u-text--uppercase">Goat Grey</div>
+                  <div>#A1A1A1</div>
+                </div>
+              </li>
+
+              <li class="ColorPalette-color ColorPalette-color--foxGrey">
+                <span class="u-text--semiBold u-font-baseSize">$foxGrey</span>
+                <div class="ColorPalette-colorCopy">
+                  <div class="u-text--semiBold u-text--uppercase">Fox Grey</div>
+                  <div>#CDCDCD</div>
+                </div>
+              </li>
+
+              <li class="ColorPalette-color ColorPalette-color--rabbitGrey">
+                <span class="u-text--semiBold u-font-baseSize">$rabbitGrey</span>
+                <div class="ColorPalette-colorCopy">
+                  <div class="u-text--semiBold u-text--uppercase">Rabbit Grey</div>
+                  <div>#E6E6E6</div>
+                </div>
+              </li>
+
+              <li class="ColorPalette-color ColorPalette-color--mouseGrey">
+                <span class="u-text--semiBold u-font-baseSize">$mouseGrey</span>
+                <div class="ColorPalette-colorCopy">
+                  <div class="u-text--semiBold u-text--uppercase">Mouse Grey</div>
+                  <div>#F5F5F5</div>
+                </div>
+              </li>
+
+              <li class="ColorPalette-color ColorPalette-color--pureBlack">
+                <span class="u-text--semiBold u-color-white u-font-baseSize">$pureBlack</span>
+                <div class="ColorPalette-colorCopy ColorPalette-colorCopy--light">
+                  <div class="u-text--semiBold u-text--uppercase">Pure Black</div>
+                  <div>#000000</div>
+                </div>
+              </li>
+
+              <li class="ColorPalette-color ColorPalette-color--footerGrey">
+                <span class="u-text--semiBold u-color-white u-font-baseSize">$footerGrey</span>
+                <div class="ColorPalette-colorCopy ColorPalette-colorCopy--light">
+                  <div class="u-text--semiBold u-text--uppercase">Footer Grey</div>
+                  <div>#272D39</div>
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="buttons" class="jsGuideSection">
+    <div class="u-width--984 u-centered">
+      <h2 class="Title--primaryLg u-borderBottom">Buttons</h2>
+      <p>
+        Buttons can be applied to both <b>anchor</b> tags and <b>button</b> tags.
+        Alternatively, the button module can be applied to an <b>input</b> tag.
+        However, the loading animation will not be applied. Our buttons are fully responsive.
+      </p>
+      <p>
+        To set up the button, simply add the <i>Button</i> css class to your <b>button</b>, <b>anchor</b> or <b>input</b> tag.
+      </p>
+      <pre>
+        <code class="html">
+          &lt;button class="Button">Button&lt;/button>
+          &lt;a class="Button">Button&lt;/a>
+          &lt;input class="Button" type="submit" value="Button" />
+        </code>
+      </pre>
+      <h4 class="Title Title--secondary u-color-goatGrey u-text--uppercase">Result</h4>
+      <div class="Examples u-margin-bottom-30">
+        <button class="Button u-margin-bottom-30">Button</button>
+        <a class="Button u-margin-bottom-30">Button</a>
+        <input class="Button" type="submit" value="Button" />
+      </div>
+
+      <h3 class="Title Title--primarySm u-borderBottom u-marginTop-60">Width</h3>
+      <p>
+        By default, the button will take 100% of the width of its parent element.
+        To prevent this, add <i>Button--minWidth</i> class to the element.
+        This will force the button to take the minimum width with 20px padding on either side.
+      </p>
+      <pre>
+        <code class="html">
+          &lt;button class="Button Button--minWidth">Button&lt;/button>
+        </code>
+      </pre>
+      <h4 class="Title Title--secondary u-color-goatGrey u-text--uppercase">Result</h4>
+      <div class="Examples u-margin-bottom-30">
+        <button class="Button Button--minWidth">Button</button>
+      </div>
+
+      <h3 class="Title Title--primarySm u-borderBottom u-marginTop-60">Height</h3>
+      <p>
+        By default, the button will take 40px of the height (45px on mWeb).
+        To prevent this, add <i>Button--low</i> class to the element.
+        This will force the button to take the height 30px (30px on mWeb).
+      </p>
+      <pre>
+        <code class="html">
+          &lt;button class="Button Button--low">Button&lt;/button>
+          &lt;button class="Button Button--minWidth Button--low">Button&lt;/button>
+        </code>
+      </pre>
+      <h4 class="Title Title--secondary u-color-goatGrey u-text--uppercase">Result</h4>
+      <div class="Examples u-margin-bottom-30">
+        <button class="Button Button--low u-margin-bottom-30">Button</button>
+        <button class="Button Button--minWidth Button--low">Button</button>
+      </div>
+
+      <h3 class="Title Title--primarySm u-borderBottom u-marginTop-60">Styles</h3>
+      <p>
+        There are a total of 8 button styles in our style guide, one of which (the last one) is used for dark backgrounds.
+      </p>
+      <pre>
+        <code class="html">
+          &lt;button class="Button Button--minWidth">Button&lt;/button>
+          &lt;button class="Button Button--ink Button--minWidth">Button&lt;/button>
+          &lt;button class="Button Button--classicBlue Button--minWidth">Button&lt;/button>
+          &lt;button class="Button Button--highlightTeal Button--minWidth">Button&lt;/button>
+          &lt;button class="Button Button--highlightAvocado Button--minWidth">Button&lt;/button>
+          &lt;button class="Button Button--errorRed Button--minWidth">Button&lt;/button>
+          &lt;button class="Button Button--hollow Button--minWidth">Button&lt;/button>
+          &lt;button class="Button Button--hollowClassic Button--minWidth">Button&lt;/button>
+          &lt;button class="Button Button--hollowDark Button--minWidth">Button&lt;/button>
+        </code>
+      </pre>
+      <h4 class="Title Title--secondary u-color-goatGrey u-text--uppercase">Result</h4>
+      <div class="Examples">
+        <button class="jsButton Button Button--minWidth">Button</button>
+        <button class="jsButton Button Button--minWidth Button--ink">Button</button>
+        <button class="jsButton Button Button--minWidth Button--classicBlue">Button</button>
+        <button class="jsButton Button Button--minWidth Button--highlightTeal">Button</button>
+        <button class="jsButton Button Button--minWidth Button--highlightAvocado">Button</button>
+        <button class="jsButton Button Button--minWidth Button--errorRed">Button</button>
+        <button class="jsButton Button Button--minWidth Button--hollow">Button</button>
+        <button class="jsButton Button Button--minWidth Button--hollowClassic">Button</button>
+      </div>
+      <div class="Examples u-background-footerGrey u-margin-bottom-30">
+        <button class="jsButton Button Button--minWidth Button--hollowDark">Button</button>
+      </div>
+
+      <h3 class="Title Title--primarySm u-borderBottom u-marginTop-60">Icons</h3>
+      <p>
+        Some buttons may contain icons.
+        The ideal source for these icons is FontAwesome.
+        You can add icons to any button.
+        The maximum icon size for button should be 12px.
+      </p>
+      <pre>
+        <code class="html">
+          &lt;button class="Button Button--minWidth">
+            &lt;i class="icon-star-empty" aria-hidden="true">&lt;/i> Button
+          &lt;/button>
+          &lt;a class="Button Button--hollow">
+            &lt;i class="icon-star-empty" aria-hidden="true">&lt;/i> Button
+          &lt;/a>
+        </code>
+      </pre>
+      <div class="Examples u-margin-bottom-30">
+        <button class="Button Button--minWidth u-margin-bottom-30">
+          <i class="icon-star-empty" aria-hidden="true"></i> Button
+        </button>
+        <a class="Button Button--hollow"><i class="icon-star-empty" aria-hidden="true"></i> Button</a>
+      </div>
+
+      <h3 class="Title Title--primarySm u-borderBottom u-marginTop-60">Disabled</h3>
+      <p>
+        All buttons have a default state for disabled.
+        If <i>Button</i> is being applied to an <b>anchor</b> tag, adding the class <i>isDisabled</i> will give it the same styling as a disabled button.
+        There is an alternate hollow version of the disabled button.
+        To use this style, add <i>Button--hollowDisabled</i> to the button.
+        Then, when the button is disabled, the hollow style will be applied.
+        In this case, the color of the enabled button does not affect its disabled style.
+      </p>
+      <pre>
+        <code class="html">
+          &lt;button class="Button Button--minWidth" disabled>Button&lt;/button>
+          &lt;a class="Button Button--ink Button--minWidth isDisabled">Button&lt;/a>
+          &lt;button class="Button Button--classicBlue Button--minWidth Button--hollowDisabled" disabled>Button&lt;/button>
+          &lt;a class="Button Button--highlightTeal Button--minWidth Button--hollowDisabled isDisabled">Button&lt;/a>
+        </code>
+      </pre>
+      <h4 class="Title Title--secondary u-color-goatGrey u-text--uppercase">Result</h4>
+      <div class="Examples u-margin-bottom-30">
+        <button class="Button Button--ink Button--minWidth" disabled>Button</button>
+        <a class="Button Button--ink Button--minWidth isDisabled">Button</a>
+        <button class="Button Button--classicBlue Button--minWidth Button--hollowDisabled" disabled>Button</button>
+        <a class="Button Button--highlightTeal Button--minWidth Button--hollowDisabled isDisabled">Button</a>
+      </div>
+
+      <h3 class="Title Title--primarySm u-borderBottom u-marginTop-60">Loading</h3>
+      <p>
+        With the exception of the <b>input</b> tag, all buttons can have a loading animation attached to them.
+        Adding the <i>isLoading</i> class to the button will apply the loading animation.
+        Below is an example of how <i>isLoading</i> is being applied to the buttons.
+        The code below also removes the animation after it is finished (3 seconds) for the sake of reusability.
+        In reality, the load animation does NOT go away until <i>isLoading</i> is removed;
+        Ideally, you would not want to continuously add and remove <i>isLoading</i>.
+      </p>
+      <pre>
+        <code class="html">
+          &lt;script>
+            (function(document) {
+              var buttonClass = document.getElementsByClassName('jsButton');
+
+              Array.from(buttonClass).forEach(function(element) {
+                element.addEventListener('click', loadingButton);
+              });
+
+              function loadingButton() {
+                var loadingTimeout;
+                var e = this;
+                if(!e.classList.contains('isLoading')) {
+                  e.classList.add('isLoading');
+                  loadingTimeout = setTimeout(function() {
+                    e.classList.remove('isLoading');
+                  }, 3000);
+                }
+              }
+            })(document);
+          &lt;/script>
+
+          &lt;button class="jsButton Button Button--minWidth">Button&lt;/button>
+          &lt;a class="jsButton Button Button--highlightTeal Button--minWidth">Button&lt;/a>
+          &lt;button class="jsButton Button Button--hollow">Button&lt;/button>
+        </code>
+      </pre>
+      <h4 class="Title Title--secondary u-color-goatGrey u-text--uppercase">Result</h4>
+      <div class="Examples">
+        <button class="jsButton Button Button--minWidth u-margin-bottom-30">Button</button>
+        <a class="jsButton Button Button--highlightTeal Button--minWidth u-margin-bottom-30">Button</a>
+        <button class="jsButton Button Button--hollow">Button</button>
+      </div>
+
+      <script>
+        (function(document) {
+          var buttonClass = document.getElementsByClassName('jsButton');
+
+          Array.from(buttonClass).forEach(function(element) {
+            element.addEventListener('click', loadingButton);
+          });
+
+          function loadingButton() {
+            var loadingTimeout;
+            var e = this;
+            if(!e.classList.contains('isLoading')) {
+              e.classList.add('isLoading');
+              loadingTimeout = setTimeout(function() {
+                e.classList.remove('isLoading');
+              }, 3000);
+            }
+          }
+        })(document);
+      </script>
+
+    </div>
+  </section>
+
+  <section id="typography" class="jsGuideSection">
+    <div class="u-width--984 u-centered">
+      <h2 class="Title--primaryLg u-borderBottom">Typography</h2>
+      <p>
+        This section describes the available typography styles that will be used throughout the site.
+      </p>
+
+      <p>
+        Default styling for <strong>h1</strong>, <strong>h2</strong>, <strong>h3</strong>,
+        <strong>h4</strong>, <strong>h5</strong>, <strong>h6</strong>
+        tags.
+      </p>
+
+      <div class="Examples">
+        <h1>h1 Heading</h1>
+        <h2>h2 Heading</h2>
+        <h3>h3 Heading</h3>
+        <h4>h4 Heading</h4>
+        <h5>h5 Heading</h5>
+        <h6>h6 Heading</h6>
+      </div>
+
+      <p>
+        Headings are broken down to 2 types: <strong>primary</strong> and <strong>secondary</strong>.
+      </p>
+
+      <p>
+        Primary headings have 3 modifiers: <strong>Lg</strong>, <strong>Md</strong>, and <strong>Sm</strong>.
+      </p>
+
+      <h4 class="Title Title--secondary u-color-goatGrey u-text--uppercase">Result</h4>
+      <div class="Examples">
+        <h2 class="Title Title--primaryLg">Title--primaryLg</h2>
+        <h2 class="Title Title--primaryMd">Title--primaryMd</h2>
+        <h2 class="Title Title--primarySm">Title--primarySm</h2>
+      </div>
+
+      <pre>
+        <code class="html">
+          &lt;h2 class="Title Title--primaryLg">Title--primaryLg text&lt;/h2>
+          &lt;h2 class="Title Title--primaryMd">Title--primaryMd text&lt;/h2>
+          &lt;h2 class="Title Title--primarySm">Title--primarySm text&lt;/h2>
+        </code>
+      </pre>
+
+      <p>
+        Secondary headings have 2 modifiers: <strong>secondary</strong> and <strong>SmCaps</strong>.
+      </p>
+
+      <h4 class="Title Title--secondary u-color-goatGrey u-text--uppercase">Result</h4>
+      <div class="Examples">
+        <h2 class="Title Title--secondary">Title--secondary</h2>
+        <h2 class="Title Title--secondarySmCaps">Title--secondarySmCaps</h2>
+      </div>
+
+      <pre>
+        <code class="html">
+          &lt;h2 class="Title Title--secondary">Title--secondary text&lt;/h2>
+          &lt;h2 class="Title Title--secondarySmCaps">Title--secondary text&lt;/h2>
+        </code>
+      </pre>
+
+      <p>
+        There are 3 types for text/copy styles: <strong>Text</strong>,
+        <strong>Text--sm</strong> and <strong>Text--disclaimer</strong>.
+      </p>
+
+      <h4 class="Title Title--secondary u-color-goatGrey u-text--uppercase">Result</h4>
+      <div class="Examples">
+        <p class="Text">
+          vitae hic sunt harum quidem earum, ut, esse neque! Nostrum recusandae.
+        </p>
+
+        <p class="Text--sm">
+          Sit molestiae dolor veritatis minus iste adipisci, facere doloribus molestiae
+          temporibus perferendis iste reprehenderit ratione perspiciatis, rem fugiat
+          minima nam quae nesciunt! Tenetur inventore enim commodi reprehenderit ipsum! Nobis ut.
+        </p>
+
+        <p class="Text--disclaimer">
+          Consectetur quae nam in hic dolore quis eos ea. Adipisicing cum quod pariatur
+          ea mollitia. Quia libero aperiam voluptatibus veniam a rem soluta. Dolorem
+          necessitatibus autem tempore odio recusandae. Laboriosam?
+        </p>
+      </div>
+
+      <pre>
+        <code class="html">
+          &lt;p class="Text">default text&lt;/p>
+          &lt;p class="Text--sm">small text&lt;/p>
+          &lt;p class="Text--disclaimer">text for all disclaimers&lt;/p>
+        </code>
+      </pre>
+
+    </div>
+  </section>
+
+  <section id="forms" class="jsGuideSection">
+    <div class="u-width--984 u-centered">
+      <h2 class="Title--primaryLg u-borderBottom">Form's elements</h2>
+
+      <h3 class="Title Title--primarySm u-borderBottom u-marginTop-60">Inputs</h3>
+      <p>
+        By default, the input will take 100% of the width of its parent element.
+        To prevent this, add <i>TextField--minWidth&nbsp;</i> class to the element.
+        For styling textarea add <i>TextField--area&nbsp;</i> class to the element.
+        This will force the button to take the minimum width.
+        If the input should be part of the form without space between the fields you should add <i>TextField--group&nbsp;</i> class to the element.
+      </p>
+      <pre>
+        <code class="html">
+          &lt;input class="TextField TextField--minWidth u-margin-bottom-30" type="text" placeholder="Text here" />
+          &lt;input class="TextField TextField--minWidth isError  u-margin-bottom-30" type="text" placeholder="Text here" />
+
+          &lt;input class="TextField TextField--group" type="text" placeholder="Email" value="user@gmail.com" />
+          &lt;input class="TextField TextField--group isError" type="text" placeholder="Phone number" />
+          &lt;input class="TextField TextField--group" type="text" placeholder="Your name" />
+          &lt;textarea class="TextField TextField--area TextField--group" placeholder="Text here" rows="4" cols="50"></textarea>
+        </code>
+      </pre>
+      <h4 class="Title Title--secondary u-color-goatGrey u-text--uppercase">Result</h4>
+      <div class="Examples u-margin-bottom-30">
+        <form action="index.html" method="post">
+          <div class="Form">
+            <div class="Form-inputBox">
+              <input class="TextField TextField--minWidth u-margin-bottom-30" type="text" placeholder="Text here" />
+              <input class="TextField TextField--minWidth isError u-margin-bottom-30" type="text" placeholder="Text here" />
+
+              <input class="TextField TextField--group" type="text" placeholder="Email" value="user@gmail.com" />
+              <input class="TextField TextField--group isError" type="text" placeholder="Phone number" />
+              <input class="TextField TextField--group" type="text" placeholder="Your name" />
+              <textarea class="TextField TextField--area TextField--group" placeholder="Text here" rows="4" cols="50"></textarea>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <h3 class="Title Title--primarySm u-borderBottom u-marginTop-60">Error</h3>
+      <p>
+        Error block after form inputs.
+      </p>
+      <pre>
+        <code class="html">
+    &lt;form>
+      &lt;div class="Form">
+        &lt;div class="FormError">
+          Please enter a valid phone number and email
+        &lt;/div>
+      &lt;/div>
+    &lt;/form>
+  </code>
+      </pre>
+      <h4 class="Title Title--secondary u-color-goatGrey u-text--uppercase">Result</h4>
+      <div class="Examples u-margin-bottom-30">
+        <form action="index.html" method="post">
+          <div class="Form">
+            <div class="Form-inputBox">
+              <input class="TextField TextField--group" type="text" placeholder="Email" value="user@gmail.com" />
+              <input class="TextField TextField--group isError" type="text" placeholder="Phone number" />
+              <input class="TextField TextField--group" type="text" placeholder="Your name" />
+              <textarea class="TextField TextField--area TextField--group" placeholder="Text here" rows="4" cols="50"></textarea>
+            </div>
+            <div class="FormError">
+              Enter your phone number
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <h3 class="Title Title--primarySm u-borderBottom u-marginTop-60">White & Filled Checkbox.</h3>
+      <p>
+        To create a filled checkbox, add the class <i>Checkbox—fill</i> to the default class <i>Checkbox</i>.
+      </p>
+      <pre>
+        <code class="html">
+          &lt;form action="index.html" method="post">
+            &lt;div class="Form">
+              &lt;input id="checkBox" type="checkbox" class="Checkbox u-margin-right-20">
+              &lt;input id="checkBox" type="checkbox" class="Checkbox u-margin-right-20" checked>
+              &lt;input id="checkBoxFill" type="checkbox" class="Checkbox Checkbox--fill u-margin-right-20">
+              &lt;input id="checkBoxFill" type="checkbox" class="Checkbox Checkbox--fill" checked>
+            &lt;/div>
+          &lt;/form>
+        </code>
+      </pre>
+      <h4 class="Title Title--secondary u-color-goatGrey u-text--uppercase">Result</h4>
+      <div class="Examples u-margin-bottom-30">
+        <form action="index.html" method="post">
+          <div class="Form">
+            <input id="checkBox" type="checkbox" class="Checkbox u-margin-right-20">
+            <input id="checkBox" type="checkbox" class="Checkbox u-margin-right-20" checked>
+            <input id="checkBoxFill" type="checkbox" class="Checkbox Checkbox--fill u-margin-right-20">
+            <input id="checkBoxFill" type="checkbox" class="Checkbox Checkbox--fill" checked>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </section>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/style_guide.js"></script>
+</body>
+</html>

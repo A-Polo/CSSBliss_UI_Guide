@@ -1,0 +1,328 @@
+.StyleGuide {
+  padding-top: 100px;
+
+  &.noscroll {
+    overflow: hidden;
+  }
+
+  a {
+    outline: none;
+  }
+
+
+  section {
+    padding: 40px 0;
+
+    @media screen and (max-width: $maxContentWidth) {
+      padding: 30px 20px;
+    }
+
+    &:nth-child(2n) {
+      background-color: $mouseGrey;
+    }
+  }
+
+  pre,
+  code {
+    width: 100%;
+  }
+
+  code {
+    background-color: $rabbitGrey;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px;
+  }
+}
+
+.Examples {
+  padding: 20px;
+  border: 2px dashed $rabbitGrey;
+  background-color: $white;
+}
+
+// Utility classes that we'll be using just for the style guide
+
+.u- {
+  &margin {
+    &Top- {
+      &60 {
+        margin-top: 60px;
+      }
+    }
+  }
+
+  &border {
+    &Bottom {
+      border-bottom: 1px solid $rabbitGrey;
+    }
+  }
+}
+
+/* Also adding our own nav here. */
+
+.StyleGuideNav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: block;
+  overflow: hidden;
+  z-index: 3;
+
+  &-top {
+    height: 50px;
+    width: 100%;
+    background-color: $ink;
+    position: relative;
+    z-index: 1;
+  }
+
+  &-burger {
+    width: 20px;
+    height: 2px;
+    display: block;
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: left 250ms, height 250ms;
+
+    @media screen and (max-width: $maxContentWidth) {
+      left: 20px;
+      height: 16px;
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $white;
+      transition: all 200ms;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: $white;
+      transition: all 200ms;
+    }
+  }
+
+  &-patty {
+    width: 100%;
+    height: 2px;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -1px;
+    background-color: $white;
+    transition: all 200ms;
+  }
+
+  &-logo {
+    position: absolute;
+    top: 50%;
+    left: calc((100vw - #{$maxContentWidth}) / 2);
+    transform: translateY(-50%);
+    transition: left 250ms, transform 250ms;
+    color: $white;
+    text-transform: uppercase;
+
+    @media screen and (max-width: $maxContentWidth) {
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    svg {
+      display: block;
+    }
+  }
+
+  &-navigation {
+    padding: 0 calc((100vw - #{$maxContentWidth}) / 2);
+    background-color: $white;
+    display: block;
+    height: 50px;
+    z-index: 1;
+
+    @media screen and (max-width: $maxContentWidth) {
+      padding: 0;
+      position: fixed;
+      top: 50px;
+      left: -300px;
+      bottom: 0;
+      height: calc(100vh - 50px);
+      border: none;
+      border-right: 1px solid $rabbitGrey;
+      width: 300px;
+      transition: left 250ms;
+    }
+  }
+
+  &-navList {
+    display: flex;
+    width: 100%;
+    height: 100%;
+
+    @media screen and (max-width: $maxContentWidth) {
+      flex-direction: column;
+    }
+  }
+
+  &-navListItem {
+    height: 100%;
+
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+
+    @media screen and (max-width: $maxContentWidth) {
+      height: auto;
+      margin: 0 !important;
+      padding: 20px;
+      border-bottom: 1px solid $rabbitGrey;
+
+    }
+  }
+
+  &-navLink {
+    display: block;
+    line-height: 47px;
+    text-decoration: none;
+    color: $whaleGrey;
+    border-bottom: 2px solid rgba($ink, 0);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 15px;
+    transition: border 250ms, color 250ms;
+
+    &:hover {
+      border-color: rgba($ink, 1);
+      color: $ink;
+    }
+
+    &.isCurrent {
+      border-color: rgba($ink, 1);
+      color: $ink;
+    }
+
+    @media screen and (max-width: $maxContentWidth) {
+      line-height: 24px;
+      display: inline-block;
+    }
+  }
+
+  &-overlay {
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 0;
+    display: block;
+    position: fixed;
+    opacity: 0;
+    background-color: rgba($whaleGrey, 0.6);
+    transition: opacity 250ms, width 0ms 250ms, height 0ms 250ms;
+    z-index: 0;
+  }
+
+  @media screen and (max-width: $maxContentWidth) {
+    &.isOpen {
+      .StyleGuideNav {
+        &-navigation {
+          left: 0;
+        }
+
+        &-burger {
+          &:before {
+            top: 50%;
+            margin-top: -1px;
+            transform: rotate(45deg);
+          }
+
+          &:after {
+            bottom: 50%;
+            margin-bottom: -1px;
+            transform: rotate(-45deg);
+          }
+
+          .StyleGuideNav-patty {
+            width: 0;
+          }
+        }
+
+        &-overlay {
+          width: 100%;
+          height: 100vh;
+          opacity: 1;
+          transition: opacity 250ms;
+        }
+      }
+    }
+  }
+}
+
+/* ADDING COLOR PALETTE HERE SO IT DOESN'T GET PULLED INTO PRODUCTION */
+
+.ColorPalette {
+  &-colorsContainer {
+    &:not(:first-child) {
+      margin-top: 80px;
+    }
+  }
+
+  &-heading {
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  &-paletteList {
+    padding: 0;
+    margin: 0 0 -10px -10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &-color {
+    width: 200px;
+    height: 200px;
+    margin: 0 0 10px 10px;
+    padding: 20px;
+    position: relative;
+    color: $whaleGrey;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 300;
+
+    @each $name, $val in $colorList {
+      &--#{$name} {
+        background-color: $val;
+      }
+    }
+  }
+
+  &-colorCopy {
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+
+    &--bold {
+      font-weight: 600;
+    }
+
+    &--light {
+      color: $white;
+    }
+  }
+}

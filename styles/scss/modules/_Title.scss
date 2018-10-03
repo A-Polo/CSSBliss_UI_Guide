@@ -1,0 +1,39 @@
+.Title {
+  font-family: $baseFontFamily;
+  font-weight: 300;
+  text-transform: none;
+
+  &--primary {
+    &Lg {
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    &Md {
+      font-size: 32px;
+      line-height: 40px;
+
+      @media-query(xs) {
+        font-size: 28px;
+        line-height: 36px;
+      }
+    }
+
+    &Sm {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+  &--secondary {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+
+    &SmCaps {
+      font-size: 12px;
+      line-height: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+}

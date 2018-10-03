@@ -1,0 +1,62 @@
+/*
+  TODO: Integrate this file for the rest of the site. Currenly, there are too
+  many styles that will be affected otherwise.
+  DO NOT MERGE INTO APPLICATION UNLESS PART OF A TECH DEBT STORY.
+ */
+
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font: 400 16px/30px $baseFontFamily;
+}
+
+ul {
+  list-style: none;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 { font: 300 40px/50px $baseFontFamily; }
+h2 {
+  font: 300 34px/42px $baseFontFamily;
+
+  @media-query(xs) {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+}
+h3 { font: 300 28px/36px $baseFontFamily; }
+h4 { font: 300 22px/32px $baseFontFamily; }
+h5 { font: 300 18px/26px $baseFontFamily; }
+h6 { font: 300 16px/24px $baseFontFamily; }
+
+p {
+  font-size: 16px;
+  line-height: 30px;
+}

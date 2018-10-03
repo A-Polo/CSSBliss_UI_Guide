@@ -1,0 +1,242 @@
+@mixin appearance($value: none) {
+  appearance: $value;
+  -moz-appearance: $value;
+  -webkit-appearance: $value;
+}
+
+@mixin iphone-text-fix {
+  -webkit-text-size-adjust: 100%;
+}
+@mixin white-button {
+  background: #fff;
+  border: 1px solid $whiteButtonBorder;
+  color: $blueBase;
+  display: inline-block;
+  font-size: $smallFontSize;
+  font-weight: bold;
+  height: 40px;
+  line-height: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover {
+    border: 1px solid $whiteButtonBorderHover;
+    text-decoration: none;
+  }
+
+  &:active {
+    background: $whiteButtonBgActive;
+    border: 1px solid $whiteButtonBorderActive;
+    text-decoration: none;
+  }
+}
+
+@mixin white-button-mobile {
+  @include white-button;
+
+  &:hover,
+  &:active {
+    background: $whiteButtonBgMobileActive;
+    border: 1px solid $whiteButtonBorderMobileActive;
+  }
+}
+
+@mixin grey-button {
+  background: $greyButtonBg;
+  border: 1px solid $greyButtonBorder;
+  color: $blueBase;
+  display: inline-block;
+  font-size: $smallFontSize;
+  font-weight: bold;
+  height: 40px;
+  line-height: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover {
+    border: 1px solid $greyButtonBorderHover;
+    text-decoration: none;
+  }
+
+  &:active {
+    background: $greyButtonBgActive;
+    border: 1px solid $greyButtonBorderActive;
+    text-decoration: none;
+  }
+}
+
+@mixin grey-button-mobile {
+  @include grey-button;
+
+  &:hover,
+  &:active {
+    background: $greyButtonBgMobileActive;
+    border: 1px solid $greyButtonBorderMobileActive;
+  }
+}
+
+@mixin black-button {
+  background: rgba(0, 0, 0, .9);
+  border: 1px solid $midGrayApprox;
+  color: #fff;
+  display: inline-block;
+  font-size: $smallFontSize;
+  font-weight: bold;
+  height: 40px;
+  line-height: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover,
+  &:active {
+    background: #fff;
+    color: $blackAlmost;
+    text-decoration: none;
+  }
+}
+
+@mixin middle-button {
+  background: #fff;
+  border: 1px solid #d4d4d4;
+  display: inline-block;
+  font-size: $smallFontSize;
+  font-weight: bold;
+  height: 30px;
+  line-height: 20px;
+  padding: 5px 20px;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  &:hover {
+    border: 1px solid #a1a1a1;
+    text-decoration: none;
+  }
+
+  &:active {
+    background: #f8f8f8;
+    border: 1px solid #a1a1a1;
+    text-decoration: none;
+  }
+}
+
+@mixin middle-button-calendar {
+  @include middle-button;
+  padding: 5px 18px 5px 33px;
+  position: relative;
+
+  &:before {
+    background: image-url('svg/icons/icon-calendar.svg') no-repeat;
+    content: '';
+    display: inline-block;
+    height: 14px;
+    left: 17px;
+    margin-right: 5px;
+    position: absolute;
+    top: 7px;
+    width: 11px;
+  }
+}
+
+@mixin nav-button {
+  background: $blueBase;
+  border: 1px solid rgba(255, 255, 255, .3);
+  color: #fff;
+  display: inline-block;
+  font-size: $smallFontSize;
+  font-weight: bold;
+  height: 30px;
+  line-height: 30px;
+  min-width: 90px;
+  padding: 0 15px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover {
+    background: $blueDarkest;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  &:active {
+    background: $blueDark;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+@mixin popup {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, .08);
+  outline: none;
+  z-index: $zIndexPopup;
+
+  &-closeButton {
+    display: none;
+  }
+}
+
+@mixin mobile-popup {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, .08);
+  margin-left: 20px;
+  margin-right: 20px;
+  outline: none;
+  position: relative;
+  z-index: $zIndexPopup;
+
+  &-closeButton {
+    position: absolute;
+    right: 18px;
+    top: 18px;
+  }
+}
+
+// Backface visibility
+// Prevent browsers from flickering when using CSS 3D transforms.
+// Default value is `visible`, but can be changed to `hidden`
+@mixin backface-visibility($visibility){
+  -webkit-backface-visibility: $visibility;
+          backface-visibility: $visibility;
+}
+
+// Transitions
+@mixin transition-transform($transition...) {
+  transition: transform $transition;
+}
+
+// User select
+// For selecting text on the page
+@mixin user-select($select: none) {
+  -webkit-user-select: $select;
+     -moz-user-select: $select;
+      -ms-user-select: $select;
+          user-select: $select;
+}
+
+// Flexbox
+@mixin flexbox() {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin placeholder($color: $goatGrey, $font-weight: normal, $letter-spacing: 0) {
+  &::-moz-placeholder {
+    font-weight: $font-weight;
+    color: $color;
+    opacity: 1;
+    letter-spacing: $letter-spacing;
+  }
+
+  &::-webkit-input-placeholder {
+    font-weight: $font-weight;
+    color: $color;
+    letter-spacing: $letter-spacing;
+  }
+}

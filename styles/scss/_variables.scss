@@ -1,0 +1,124 @@
+// ********************** NEW COLORS **********************
+// ************ PLEASE USE THESE GOING FORWARD ************
+// If you cannot find the color that is in your design in this list,
+// ask a designer FIRST. If they tell you to use another one, check
+// remaining colors in this file for the color you need.
+
+
+// Blues
+$ink: #032765;
+$brightBlue: #0195E5;
+$classicBlue: #0080C6;
+$glass: #D5F3FD;
+$frostedGlass: #E6F8FE;
+
+//Accents
+$highlightTeal: #3FE8DF;
+$highlightAvocado: #E0E572;
+$highlightDove: #B5C8C9;
+$errorRed: #ED432F;
+
+//Greys (animals)
+$whaleGrey: #1A1F2C;
+$wolfGrey: #62646A;
+$koalaGrey: #8C8C8C;
+$goatGrey: #A1A1A1;
+$foxGrey: #CDCDCD;
+$rabbitGrey: #E6E6E6;
+$mouseGrey: #F5F5F5;
+
+$pureBlack: #000;
+// Should not be used for anything else besides the footer
+// (promised by Young Seo on Oct. 23, 2017)
+$footerGrey: #272D39;
+
+// Colors List
+$colorList: ("ink": $ink, "brightBlue": $brightBlue, "classicBlue": $classicBlue, "glass": $glass, "frostedGlass": $frostedGlass, "highlightTeal": $highlightTeal, "highlightAvocado": $highlightAvocado, "highlightDove": $highlightDove, "errorRed": $errorRed, "whaleGrey": $whaleGrey, "wolfGrey": $wolfGrey, "koalaGrey": $koalaGrey, "goatGrey": $goatGrey, "foxGrey": $foxGrey, "rabbitGrey": $rabbitGrey, "mouseGrey": $mouseGrey, "pureBlack": $pureBlack, "footerGrey": $footerGrey);
+
+// TODO: Narrow down some of these colors with design team.
+
+$blackAlmost: #1A1F2C;
+$black: #000;
+$white: #FFF;
+
+// 50 shades of grey
+$whiteGrey: #F7F7F7;
+$greyConcrete: #F2F2F2;
+$greyLighter: #F5F5F5;
+$alabasterGray: #F8F8F8;
+$greyHyperLight: #FBFBFB;
+$greyUltraLight: #EBEBEB;
+$greyLight: #E6E6E6;
+$mercury: #E5E5E5;
+$altoGray: #D4D4D4;
+$silverApprox: #CDCDCD;
+$greySilverLight: #CCCCCC;
+$greySilver: #C0C0C0;
+$silverChaliceApprox: #AAAAAA;
+$greyMedium: #A1A1A1;
+$dustyGrayApprox: #999;
+$doveGrayApprox: #666666;
+$midGray: #62646A;
+$greyDark: #4A4A4A;
+$greyDarkest: #333;
+$ebonyClayApprox: #272D39;
+
+$bahamaBlue: #00659D;
+$blueBase: #0080C6;
+$blueDarkest: #0077b8;
+$blueDarker: #20659F;
+$blueDark: #004C75;
+$blueBorder: #A3D2EB;
+$blueLight: #D4ECFA;
+$blueUltraLightAlmost: #E1F2FC;
+$blueUltraLight: #E9F5FC;
+
+$yellow: #FDC435;
+$orangeBase: #FC7D27;
+$orangeDark: #E04710;
+$redError: #ED432F;
+$red: #FF0000;
+$redLight: #FDECEA;
+$redProgress: #a90707;
+$redBurnt: #690B00;
+
+$cremeLight: #F7EEDA;
+
+$teal: #4BDDC2;
+$turquoise: #3dd9c2;
+
+// fonts
+$baseFontFamily: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+$semiBoldFontFamily: 'SourceSansPro-Semibold', Helvetica, Arial, sans-serif;
+
+// z-index
+$zIndexBody: 0;
+$zIndexDropdown: 10;
+$zIndexMenu: 20;
+$zIndexHeader: 30;
+$zIndexGallery: 40;
+$zIndexPopup: 50;
+$zIndexTooltipsHover: 70;
+$zIndexSelect: 80;
+$zIndexFlash: 90;
+$zIndexModal: 1060;
+
+// sizes
+$maxContentWidth: 984px;
+
+// Media queries breakpoints
+//-----------------------------------------------------------------------------
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+$screen-xs-min:                 320px !default;
+
+// Small screen / tablet
+$screen-sm-min:                 660px !default;
+
+// Medium screen / desktop
+$screen-md-min:                 980px !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max:                 ($screen-sm-min - 1) !default;
+$screen-sm-max:                 ($screen-md-min - 1) !default;

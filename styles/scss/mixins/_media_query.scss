@@ -1,0 +1,49 @@
+@mixin media_mobile {
+  @media screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin hidpi($ratio: 1.3) {
+  @media only screen and (-webkit-min-device-pixel-ratio: $ratio),
+  only screen and (min--moz-device-pixel-ratio: $ratio),
+  only screen and (-o-min-device-pixel-ratio: #{$ratio}/1),
+  only screen and (min-resolution: round($ratio * 96dpi)),
+  only screen and (min-resolution: $ratio * 1dppx) {
+    @content;
+  }
+}
+
+@mixin media-query($media...) {
+  $this-media: nth($media, 1);
+
+  @if length($media) > 1 {
+    $second-media: nth($media, 2);
+
+    @if ($this-media == xs and $second-media == sm) or ($this-media == sm and $second-media == xs) {
+      @media screen and (max-width: $screen-sm-max) { @content; }
+    } @else if ($this-media == sm and $second-media == md) or ($this-media == md and $second-media == sm) {
+      @media screen and (min-width: $screen-sm-min) { @content; }
+    }
+  } @else {
+
+    // landscape for <= 736px
+    @if $this-media == landscape {
+      @media screen and (orientation: landscape) and (max-width: $mobileLandscapeWidth) {
+        @content;
+      }
+    }
+      // < 659px
+    @else if $this-media == xs {
+      @media screen and (max-width: $screen-xs-max) { @content; }
+    }
+      // 660px - 979px
+    @else if $this-media == sm {
+      @media screen and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) { @content; }
+    }
+      // > 980px
+    @else if $this-media == md {
+      @media (min-width: $screen-md-min) { @content; }
+    }
+  }
+}

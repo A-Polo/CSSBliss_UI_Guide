@@ -1,0 +1,30 @@
+@mixin popup {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, .08);
+  outline: none;
+  z-index: $zIndexPopup;
+
+  &-closeButton {
+    display: none;
+  }
+}
+
+@mixin mobile-popup {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, .08);
+  margin-left: 20px;
+  margin-right: 20px;
+  outline: none;
+  position: relative;
+  z-index: $zIndexPopup;
+
+  &-closeButton {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+  }
+}

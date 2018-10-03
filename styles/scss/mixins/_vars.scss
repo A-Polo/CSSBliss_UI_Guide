@@ -1,0 +1,94 @@
+$width: 984px;
+
+$mobilePadding: 20px;
+
+$popupSignUpWidth: 332px;
+
+$baseFontFamily: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+$lightFontFamily: 'Source Sans Pro Light', Helvetica, Arial, sans-serif;
+$titleFontFamily: $baseFontFamily;
+$inputFieldFontFamily: $baseFontFamily;
+
+$baseFontSize: 14px;
+$titleFontSize: 16px;
+$smallFontSize: 12px;
+$mediumFontSize: 18px;
+$largeFontSize: 24px;
+$inputFieldFontSizeNormal: $smallFontSize;
+
+$headerHeight:    50px;
+
+$menuWidth:       255px;
+$navbarHeight:    45px;
+
+$padding: 20px;
+
+$inputFieldHeightNormal: 40px;
+
+$zIndexBody: 0;
+$zIndexMenu: 10;
+$zIndexHeader: 20;
+$zIndexGallery: 30;
+$zIndexPopup: 40;
+$zIndexTooltipsHover: 60;
+$zIndexSelect: 70;
+$zIndexFlash: 80;
+
+$blackAlmost: #1A1F2C;
+$black: #000;
+$mirageApprox: #191F2D;
+$white: #FFF;
+
+$greyMedium:  #A1A1A1;
+$greyLight:   #E6E6E6;
+$greyLighter: #F5F5F5;
+$greyAlabaster: #F7F7F7;
+$silverApprox: #CDCDCD;
+$midGrayApprox: #62646A;
+$altoApprox: #DCDCDC;
+$grayAlto: #D4D4D4;
+$ebonyClayApprox: #272D39;
+
+$blueBase:    #0080C6;
+$blueLighter: #EEF8FD; // 40% from $blueLight
+$blueDark:    #004C75;
+$blueDarker:  #20659F;
+$blueDarkest: #0077b8;
+
+$greyBorder:       #E4E4E4;
+$greyBorderDark:   #D4D4D4;
+$greyButtonBorder: $silverApprox;
+
+$yellow:      #FDC435;
+$redError:    #ED432F;
+$turquoise:   #3dd9c2;
+
+$mercury: #e5e5e5;
+
+$noImageLarge: image-url('default/no_photo_large.png');
+
+$popupGreyBackground: #fbfbfb;
+
+$inputFieldBorderColor:       #E6E6E6;
+$inputFieldBorderColorActive: #a1a1a1;
+$inputFieldColor:             $blackAlmost;
+$inputFieldPlaceholderColor:  #a1a1a1;
+$inputFieldSelectedBg:        #f2f9fd; // 30% opacity from #D4ECFA
+$inputFieldPadding:           10px;    // for left and right sides
+
+$whiteButtonBorder:       $silverApprox;
+$whiteButtonBorderHover:  #A1A1A1;
+$whiteButtonBorderActive: $whiteButtonBorderHover;
+$whiteButtonBgActive:     #f5f5f5;
+
+$whiteButtonBorderMobileActive: $whiteButtonBorder;
+$whiteButtonBgMobileActive:     #f5f5f5;
+
+$greyButtonBorder:       $silverApprox;
+$greyButtonBorderHover:  #A1A1A1;
+$greyButtonBorderActive: $greyButtonBorderHover;
+$greyButtonBg:           #f5f5f5;
+$greyButtonBgActive:     #e6e6e6;
+
+$greyButtonBorderMobileActive: $greyButtonBorder;
+$greyButtonBgMobileActive:     #e6e6e6;

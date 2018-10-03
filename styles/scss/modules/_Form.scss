@@ -1,0 +1,13 @@
+.Form {
+  &-inputBox {
+    padding-bottom: 15px;
+  }
+
+  &--minWidth {
+    width: 350px;
+
+    @include media-query(sm, xs) {
+      width: 100%;
+    }
+  }
+}

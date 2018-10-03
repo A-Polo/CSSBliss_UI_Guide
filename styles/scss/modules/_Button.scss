@@ -1,0 +1,315 @@
+.Button {
+  $buttonColors: ("ink": $ink, "brightBlue": $brightBlue, "classicBlue": $classicBlue, "highlightTeal": $highlightTeal, "highlightAvocado": $highlightAvocado, "errorRed": $errorRed);
+  /* normalize */
+  background: none;
+  border-radius: 0;
+  outline: none !important;
+  color: $white;
+  text-decoration: none !important;
+  -webkit-appearance: none;
+
+  display: inline-block;
+  position: relative;
+  font: bold 12px/38px $baseFontFamily;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+
+  cursor: pointer;
+  @include user-select(none);
+  transition: background 200ms, border 200ms, color 200ms;
+  border: 1px solid;
+  padding: 0 20px;
+  width: 100%;
+  height: 40px;
+
+  background-color: $brightBlue;
+  border-color: $brightBlue;
+
+  @include media-query(xs) {
+    height: 45px;
+    font: bold 12px/43px $baseFontFamily;
+  }
+
+  &:link,
+  &:visited {
+    color: $white;
+
+    &:hover {
+      color: $white;
+    }
+  }
+
+  &--minWidth {
+    width: auto;
+
+    &120 {
+      min-width: 120px;
+    }
+  }
+
+  &--low {
+    font: bold 12px/28px $baseFontFamily;
+    height: 30px;
+
+    @include media-query(xs) {
+      font: bold 12px/28px $baseFontFamily;
+      height: 30px;
+    }
+  }
+
+  &:hover {
+    background-color: darken($brightBlue, 5%);
+    border-color: darken($brightBlue, 5%);
+
+    @include media-query(xs) {
+      background-color: $brightBlue;
+      border-color: $brightBlue;
+    }
+  }
+
+  &:active {
+    background-color: darken($brightBlue, 10%);
+    border-color: darken($brightBlue, 10%);
+  }
+
+  &:disabled {
+    background-color: $foxGrey;
+    border-color: $foxGrey;
+    cursor: default;
+    pointer-events: none;
+
+    &:hover {
+      background-color: $foxGrey;
+      border-color: $foxGrey;
+    }
+
+    &:active {
+      background-color: $foxGrey;
+      border-color: $foxGrey;
+    }
+  }
+
+  &.isDisabled {
+    background-color: $foxGrey;
+    border-color: $foxGrey;
+    cursor: default;
+    pointer-events: none;
+
+    &:hover {
+      background-color: $foxGrey;
+      border-color: $foxGrey;
+    }
+
+    &:active {
+      background-color: $foxGrey;
+      border-color: $foxGrey;
+    }
+  }
+
+  &--hollowDisabled {
+    &:disabled {
+      background-color: rgba($foxGrey, 0);
+      color: $foxGrey;
+      border-color: $foxGrey;
+
+      &:hover {
+        background-color: rgba($foxGrey, 0);
+        border-color: $foxGrey;
+      }
+
+      &:active {
+        background-color: rgba($foxGrey, 0);
+        border-color: $foxGrey;
+      }
+    }
+
+    &.isDisabled {
+      background-color: rgba($foxGrey, 0);
+      color: $foxGrey;
+      border-color: $foxGrey;
+
+      &:hover {
+        background-color: rgba($foxGrey, 0);
+        border-color: $foxGrey;
+      }
+
+      &:active {
+        background-color: rgba($foxGrey, 0);
+        border-color: $foxGrey;
+      }
+    }
+  }
+
+  &.isLoading {
+    position: relative;
+    background-color: darken($brightBlue, 10%);
+    border-color: darken($brightBlue, 10%);
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.2);
+      animation: loadingButton 3s ease-in-out forwards;
+      z-index: 1;
+    }
+
+    @keyframes loadingButton {
+      0% {
+        right: 100%;
+      }
+
+      100% {
+        right: 10px;
+      }
+    }
+  }
+
+  @each $name, $val in $buttonColors {
+    $p: 5%;
+
+    @if $name == "highlightTeal" or $name == "highlightAvocado" or $name == "errorRed" {
+      $p: 10%;
+    }
+
+    &--#{$name} {
+      background-color: $val;
+      border-color: $val;
+
+      &:hover {
+        background-color: darken($val, $p);
+        border-color: darken($val, $p);
+
+        @include media-query(xs) {
+          background-color: $val;
+          border-color: $val;
+        }
+      }
+
+      &:active {
+        background-color: darken($val, $p + 5%);
+        border-color: darken($val, $p + 5%);
+      }
+
+      &.isLoading {
+        background-color: darken($val, $p + 5%);
+        border-color: darken($val, $p + 5%);
+      }
+    }
+  }
+
+  &--classicBlue {
+    background-color: $classicBlue, 1;
+    border: 1px solid $classicBlue;
+    color: $white;
+
+    @include media-query(xs, sm) {
+      &:hover {
+        background-color: darken($classicBlue, 0.2);
+        border-color: darken($classicBlue, 0.2);
+      }
+    }
+
+    &:hover,
+    &:active {
+      background-color: darken($classicBlue, 0.2);
+      border-color: darken($classicBlue, 0.2);
+    }
+  }
+
+  &--hollow {
+    color: $brightBlue;
+    background-color: rgba($pureBlack, 0);
+    border-color: $foxGrey;
+
+    &:hover {
+      background-color: rgba($pureBlack, 0);
+      border-color: darken($foxGrey, 15%);
+
+      @include media-query(xs) {
+        background-color: rgba($pureBlack, 0);
+        border-color: $foxGrey;
+      }
+    }
+
+    &:active {
+      background-color: rgba($pureBlack, 0.03);
+      border-color: darken($foxGrey, 15%);
+    }
+
+    &.isLoading {
+      background-color: rgba($pureBlack, 0.03);
+      border-color: darken($foxGrey, 15%);
+    }
+  }
+
+  &--hollowClassic {
+    &,
+    &:link,
+    &:visited {
+      background-color: rgba($pureBlack, 0);
+      border-color: $foxGrey;
+      color: $classicBlue;
+
+      &:hover {
+        background-color: rgba($pureBlack, 0);
+        border-color: darken($foxGrey, 15%);
+        color: $classicBlue;
+
+        @include media-query(xs) {
+          background-color: rgba($pureBlack, 0);
+          border-color: $foxGrey;
+        }
+      }
+
+      &:active {
+        background-color: rgba($pureBlack, 0.03);
+        border-color: darken($foxGrey, 15%);
+      }
+
+      &.isLoading {
+        background-color: rgba($pureBlack, 0.03);
+        border-color: darken($foxGrey, 15%);
+      }
+    }
+  }
+
+  &--hollowDark {
+    color: $white;
+    background-color: rgba($white, 0);
+    border-color: rgba($white, 0.3);
+
+    &:link,
+    &:visited {
+      color: $white;
+    }
+
+    &:hover {
+      color: $whaleGrey;
+      background-color: rgba($white, 1);
+      border-color: rgba($white, 0.3);
+
+      @include media-query(xs) {
+        color: $white;
+        background-color: rgba($white, 0);
+        border-color: rgba($white, 0.3);
+      }
+    }
+
+    &:active {
+      color: $whaleGrey;
+      background-color: rgba($white, 1);
+      border-color: rgba($white, 0.3);
+    }
+
+    &.isLoading {
+      color: $whaleGrey;
+      background-color: rgba($white, 1);
+      border-color: rgba($white, 0.3);
+    }
+  }
+}

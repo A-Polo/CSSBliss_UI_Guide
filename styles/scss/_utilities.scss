@@ -1,0 +1,426 @@
+/*
+CSSBliss Utility Classes
+.u-camelCase
+*/
+
+.u-boldLink {
+  font-size: 12px !important;
+  line-height: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: $blueBase;
+  background: none !important;
+  border: none !important;
+  height: auto !important;
+  outline: none !important;
+}
+
+.u-pointer {
+  cursor: pointer;
+}
+
+.u-nowrap {
+  white-space: nowrap;
+}
+
+.u-noBorder {
+  border: 0 !important;
+}
+
+.u-noMargin {
+  margin: 0 !important; //overriding a lot of the margins set on elements
+}
+
+.u-noPaddingBottom {
+  padding-bottom: 0 !important;
+}
+
+.u-noPadding {
+  padding: 0 !important;
+}
+
+.u-hidden {
+  display: none !important;
+}
+
+.u-hidden-tablet-portrait {
+  @media screen and (min-width: 768px) and (max-width: 1023px) and (orientation: portrait) {
+    display: none !important;
+  }
+}
+
+.u-hidden-tablet-landscape {
+  @media screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+    display: none !important;
+  }
+}
+
+.u-displayNone {
+  display: none; // no !important here
+}
+
+/* colors */
+
+.u-color-blueBase {
+  color: $blueBase;
+}
+
+.u-colorBlue {
+  color: $blueBase;
+}
+
+.u-colorGreySemi {
+  color: $koalaGrey;
+}
+
+.u-colorGoatGrey {
+  color: $goatGrey;
+}
+
+.u-background-GreyLighter {
+  background-color: $greyLighter;
+}
+
+.u-color-errorRed {
+  color: $redError;
+}
+
+/* new colors */
+
+.u-color {
+  @each $name, $val in $colorList {
+    &-#{$name} {
+      color: $val;
+
+      &--important {
+        color: $val !important; // to override anything that's being mean right now
+      }
+    }
+  }
+
+  &-white {
+    color: $white !important;
+  }
+}
+
+/* padding */
+
+.u-padding-bottom-20 {
+  padding-bottom: 20px;
+}
+
+.u-padding-bottom-18 {
+  padding-bottom: 18px;
+}
+
+.u-padding-bottom-16 {
+  padding-bottom: 16px;
+}
+
+.u-padding-bottom-15 {
+  padding-bottom: 15px;
+}
+
+.u-padding-bottom-14 {
+  padding-bottom: 14px;
+}
+
+.u-padding-bottom-0 {
+  padding-bottom: 0;
+}
+
+.u-padding-top-5 {
+  padding-top: 5px;
+}
+
+.u-padding-top-10 {
+  padding-top: 10px;
+}
+
+.u-padding-right-10 {
+  padding-right: 10px !important;
+}
+
+.u-padding-right-15 {
+  padding-right: 15px !important;
+}
+
+.u-padding-left-15 {
+  padding-left: 15px !important;
+}
+
+.u-padding-right-20 {
+  padding-right: 20px;
+}
+
+.u-padding-left-22 {
+  padding-left: 22px;
+}
+
+.u-padding-left-50 {
+  padding-left: 50px !important;
+}
+
+.u-padding-right-50 {
+  padding-right: 50px !important;
+}
+
+.u-padding-horizontal-38 {
+  padding-left: 38px;
+  padding-right: 38px;
+}
+
+.u-padding-top-24 {
+  padding-top: 24px;
+}
+
+/* position */
+
+.u-positionStatic {
+  position: static !important;
+}
+
+/* flex */
+
+.u-flex-growShrink {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.u-force-inlineBlock {
+  /* force inline for legacy content */
+  display: inline-block !important;
+}
+
+.u-verticalAlign-middle {
+  vertical-align: middle;
+}
+// TODO: move it inside of u-background
+.u-background-greyLighter {
+  background-color: $greyLighter !important;
+}
+
+.u-background{
+  @each $name, $val in $colorList {
+    &-#{$name} {
+      background-color: $val;
+    }
+  }
+
+  &-white {
+    background-color: $white;
+  }
+
+// TODO: to modifier or not to modifier? we should probably move out of it for background and color?
+  &--white {
+    background-color: $white;
+  }
+}
+
+.u-float-right {
+  float: right;
+}
+
+.u-margin-bottom-5 {
+  margin-bottom: 5px;
+}
+
+.u-margin-bottom-10 {
+  margin-bottom: 10px;
+}
+
+.u-margin-bottom-30 {
+  margin-bottom: 30px;
+}
+
+.u-margin-right-20 {
+  margin-right: 20px;
+}
+
+.u-top-0 {
+  top: 0 !important;
+}
+
+/* text */
+
+.u-capitalize {
+  text-transform: capitalize;
+}
+
+// TODO: remove this because it's a duplicate, see line 128
+.u-text-center {
+  text-align: center !important;
+}
+
+.u-font-baseSize {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: normal;
+}
+
+.u-copySize {
+  font-size: 14px;
+  line-height: 18px;
+
+  &--16 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.u-text {
+  &--uppercase {
+    text-transform: uppercase;
+  }
+
+  &--semiBold {
+    font-weight: 600;
+  }
+
+  &--bold {
+    font-weight: 700;
+  }
+
+  &--align {
+    &Right {
+      text-align: right;
+    }
+
+    &Center {
+      text-align: center;
+    }
+
+    &Left {
+      text-align: left;
+    }
+  }
+  &--noDecoration {
+    text-decoration: none !important; // link override
+  }
+}
+
+.u-ellipsis {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* flexbox, hopefully will be replaced with grid layout */
+.flexBox-row {
+  @include flexbox();
+  flex-direction: row;
+}
+
+.flexBox-column {
+  @include flexbox();
+  flex-direction: column;
+}
+
+.flexBox-nowrap {
+  flex-wrap: nowrap;
+}
+
+.flexBox-alignMiddle {
+  align-items: center;
+}
+
+.flexBox-alignTop {
+  align-items: flex-start;
+}
+
+.flexBox-alignSelfStart {
+  align-self: flex-start;
+}
+
+.flexBox-spaceBetween {
+  justify-content: space-between;
+}
+
+.flexBox-alignStretch {
+  align-items: stretch;
+}
+
+.u-flexbox {
+  display: flex;
+
+  &--wrap {
+    flex-wrap: wrap;
+  }
+}
+
+/* borders */
+
+.u-border {
+  &--all {
+    border: 1px solid transparent;
+  }
+
+  &--bottom {
+    border-bottom: 1px solid transparent;
+  }
+
+  &--silverApprox {
+    border-color: $silverApprox;
+  }
+
+  &--rabbitGrey {
+    border-color: $rabbitGrey;
+  }
+}
+
+/* width */
+.u-width {
+  &--one-half {
+    width: 50%;
+  }
+
+  &--980 {
+    width: 980px;
+  }
+
+// DO NOT USE THIS UTILITY CLASS!!! ONLY BEING USED FOR STYLEGUIDE.
+// After a grid layout is created to be integrated with the new max-width: 984px layout, we will need to update
+// the entire site to use the new width. In the meantime, please DO NOT USE THIS WIDTH!!!
+// developer notes: Oak Kim on November 6, 2017
+  &--984 {
+    width: 100%;
+    max-width: $maxContentWidth;
+
+    &Fixed {
+      width: $maxContentWidth;
+    }
+  }
+
+  &--full {
+    width: 100%;
+  }
+}
+
+.u-height {
+  &--full {
+    height: 100%;
+  }
+}
+
+/* overflow/visibility */
+.u-overflow {
+  &--visible {
+    overflow: visible !important;
+  }
+
+  &--hidden {
+    overflow: hidden;
+  }
+}
+
+.u-visible-tablet-portrait {
+  @media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+    display: block !important;
+    visibility: visible !important;
+  }
+}
+
+.u-centered {
+  margin: 0 auto;
+}

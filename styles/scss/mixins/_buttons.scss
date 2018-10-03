@@ -1,0 +1,159 @@
+@mixin white-button {
+  background: $white;
+  border: 1px solid $whiteButtonBorder;
+  color: $blueBase;
+  display: inline-block;
+  font-size: $smallFontSize;
+  font-weight: bold;
+  height: 40px;
+  line-height: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover {
+    border: 1px solid $whiteButtonBorderHover;
+    text-decoration: none;
+  }
+
+  &:active {
+    background: $whiteButtonBgActive;
+    border: 1px solid $whiteButtonBorderActive;
+    text-decoration: none;
+  }
+}
+
+@mixin white-button-mobile {
+  @include white-button;
+
+  &:hover,
+  &:active {
+    background: $whiteButtonBgMobileActive;
+    border: 1px solid $whiteButtonBorderMobileActive;
+  }
+}
+
+@mixin grey-button {
+  background: $greyButtonBg;
+  border: 1px solid $greyButtonBorder;
+  color: $blueBase;
+  display: inline-block;
+  font-size: $smallFontSize;
+  font-weight: bold;
+  height: 40px;
+  line-height: .01;
+  padding: 21px 30px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover {
+    border: 1px solid $greyButtonBorderHover;
+    text-decoration: none;
+  }
+
+  &:active {
+    background: $greyButtonBgActive;
+    border: 1px solid $greyButtonBorderActive;
+    text-decoration: none;
+  }
+}
+
+@mixin grey-button-mobile {
+  @include grey-button;
+
+  &:hover,
+  &:active {
+    background: $greyButtonBgMobileActive;
+    border: 1px solid $greyButtonBorderMobileActive;
+  }
+}
+
+@mixin black-button {
+  background: rgba($black, .9);
+  border: 1px solid $midGray;
+  color: $white;
+  display: inline-block;
+  font-size: $smallFontSize;
+  font-weight: bold;
+  height: 40px;
+  line-height: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover,
+  &:active {
+    background: $white;
+    color: $blackAlmost;
+    text-decoration: none;
+  }
+}
+
+@mixin middle-button {
+  background: $white;
+  border: 1px solid $altoGray;
+  display: inline-block;
+  font-size: $smallFontSize;
+  font-weight: bold;
+  height: 30px;
+  line-height: 20px;
+  padding: 5px 20px;
+  text-transform: uppercase;
+  white-space: nowrap;
+
+  &:hover {
+    border: 1px solid $greyMedium;
+    text-decoration: none;
+  }
+
+  &:active {
+    background: $alabasterGray;
+    border: 1px solid $greyMedium;
+    text-decoration: none;
+  }
+}
+
+@mixin middle-button-calendar {
+  @include middle-button;
+  padding: 5px 18px 5px 33px;
+  position: relative;
+
+  &:before {
+    background: image-url('svg/icons/icon-calendar.svg') no-repeat;
+    content: '';
+    display: inline-block;
+    height: 14px;
+    left: 17px;
+    margin-right: 5px;
+    position: absolute;
+    top: 7px;
+    width: 11px;
+  }
+}
+
+@mixin nav-button {
+  background: $blueBase;
+  border: 1px solid rgba($white, .3);
+  color: $white;
+  display: inline-block;
+  font-size: $smallFontSize;
+  font-weight: bold;
+  height: 30px;
+  line-height: 30px;
+  margin: 8px 10px 0 0;
+  padding: 0 9px;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:hover {
+    background: $blueDarkest;
+    color: $white;
+    text-decoration: none;
+  }
+
+  &:active {
+    background: $blueDark;
+    color: $white;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,33 @@
+input[type="checkbox"]:not(.CheckBox-input) {
+  &.Checkbox {
+    outline: none;
+    vertical-align: middle;
+
+    &::before {
+      background: $white;
+      border-radius: 2px;
+      border: 1px solid $silverApprox;
+      content: "";
+      display: inline-block;
+      height: 18px;
+      margin: -6px 0 0 -2px;
+      vertical-align: middle;
+      width: 18px;
+    }
+
+    &:checked {
+      &::before {
+        background: $white url("../../../icons/checkbox_tick.svg") center no-repeat;
+      }
+    }
+
+    &--fill {
+      &:checked {
+        &::before {
+          background: $classicBlue url("../../../icons/checkbox_tick_white.svg") center no-repeat;
+          border-color: $classicBlue;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,97 @@
+.TextField {
+  background-color: $white;
+  border-radius: 0;
+  border: 1px solid $foxGrey;
+  color: $whaleGrey;
+  font-family: $baseFontFamily;
+  font: normal 14px/14px $baseFontFamily;
+  height: 40px;
+  outline: none;
+  padding: 12px 10px;
+  resize: none;
+  transition: border-color 250ms;
+  width: 100%;
+
+  @include placeholder($koalaGrey, 300);
+
+  @include media-query(sm, xs) {
+    height: 45px;
+    padding: 14px 15px;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus {
+    border-color: $goatGrey;
+    caret-color: $classicBlue;
+  }
+
+  &.isError {
+    border-color: $errorRed;
+
+    &:active,
+    &:focus {
+      border-color: $goatGrey;
+    }
+  }
+
+  &--area {
+    height: auto;
+  }
+
+  &--group {
+    border-bottom: 0;
+
+    &:last-child {
+      border-bottom: 1px solid $foxGrey;
+
+      &:focus,
+      &:active {
+        border-color: $goatGrey;
+      }
+    }
+
+    &:focus {
+      + .TextField--group {
+        border-top-color: $goatGrey;
+      }
+
+      + .TextField--group.isError {
+        border-top-color: $errorRed;
+      }
+    }
+
+    &:active {
+      + .TextField--group {
+        border-top-color: $goatGrey;
+      }
+
+      + .TextField--group.isError {
+        border-top-color: $errorRed;
+      }
+    }
+
+
+    &.isError {
+      &:focus {
+        + .TextField--group {
+          border-top-color: $goatGrey;
+        }
+      }
+
+      + .TextField--group {
+        border-top-color: $errorRed;
+      }
+    }
+  }
+
+  &--minWidth {
+    width: 350px;
+
+    @include media-query(sm, xs) {
+      width: 100%;
+    }
+  }
+}
