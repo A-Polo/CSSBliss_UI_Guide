@@ -5,7 +5,8 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         options: {
-          style: 'expanded'
+          style: 'expanded',
+          compass: true
         },
         files: {
           'styles/css/index.css': 'styles/scss/index.scss'
